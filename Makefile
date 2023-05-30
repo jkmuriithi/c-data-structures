@@ -1,7 +1,7 @@
 MAKE = make
 BINDIR = bin
 
-all: testfiles
+all: tests
 
 clean:
 	rm -f **/*.o **/*.gch **/*.exe src/**/*.gch
@@ -9,6 +9,6 @@ clean:
 exec:
 	$(MAKE) && ./$(BINDIR)/*.exe
 
-testfiles:
+tests:
 	$(MAKE) -C test
 
