@@ -3,7 +3,7 @@ MAKE = make
 all: testfiles
 
 clean:
-	rm -f **/*.o src/**/*.gch bin/*.exe
+	rm -f **/*.o **/*.gch **/*.exe src/**/*.gch
 
 testfiles:
 	$(MAKE) -C test
