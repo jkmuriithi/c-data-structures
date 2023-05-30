@@ -7,8 +7,12 @@ decision was made for the sake of both simplicity and ease-of-use
 [this StackOverflow thread](https://stackoverflow.com/questions/31867369/void-as-generic-in-c-is-it-safe)).
 
 ## Getting Started
-This repo uses `make` as its build system, and in general follows the C17
-language standard.
+This repo uses `make` as its build system, `gcc` as its compiler, and in general
+it follows the C17 language standard.
+
+Windows users without `gcc` can install it using
+[MinGW](https://www.mingw-w64.org/). One easy way to do this is to first install
+[Chocolatey](https://community.chocolatey.org/) and then call `choco install mingw`.
 
 ```bash
 # Clone the repo
