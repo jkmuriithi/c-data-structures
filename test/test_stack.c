@@ -47,6 +47,9 @@ int main(void) {
         errif(Stack_peek(s) != &t[i], "Stack_peek incorrect");
     }
 
+    errif(!Stack_trim(s), "Stack_trim failure");
+    errif(Stack_trim(NULL), "Stack_trim of NULL is true");
+
     for (int i = 0; i < 6; i++) {
         Tester* peek = Stack_peek(s);
         Tester* pop = Stack_pop(s);
@@ -61,6 +64,7 @@ int main(void) {
     // Stack_destroy
     Stack_destroy(NULL);
     Stack_destroy(s);
+    s = NULL;
 
     printf("All tests passed.\n");
     exit(EXIT_SUCCESS);

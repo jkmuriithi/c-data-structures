@@ -51,7 +51,7 @@ bool Stack_empty(Stack* s) {
  * NULL s.
  */
 static bool resize(Stack* s, size_t new_length) {
-    void** new_alloc = realloc(s->items, new_length);
+    void** new_alloc = realloc(s->items, sizeof(void*) * new_length);
     if (new_alloc == NULL) return false;
 
     s->items = new_alloc;
