@@ -96,6 +96,8 @@ bool Stack_trim(Stack* s) {
 }
 
 void Stack_destroy(Stack* s) {
+    if (s == NULL) return;
+
     free(s->items);
     free(s);
 }
