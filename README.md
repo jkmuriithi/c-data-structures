@@ -21,6 +21,15 @@ cd c-data-structures
 make
 ```
 
-## Working Data Structures
+## Working Implementations
 - Stack
-## Planned Data Structures
+## Planned Implementations
+- Queue
+- List (Dynamic Array)
+- Union-Find-Delete (for unsigned long operations)
+- Priority Queue
+- Hash Table
+- Hash Set
+- Trie (for char operations)
+
+

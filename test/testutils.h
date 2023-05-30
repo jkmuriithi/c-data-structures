@@ -11,7 +11,7 @@
 
 #define errif(expr, message)                                        \
 if (expr) {                                                         \
-    fprintf(stderr, "Error: %s (line %u)\n", message, __LINE__ );   \
+    fprintf(stderr, "Error: %s (line %u)\n", (message), __LINE__ ); \
     exit(EXIT_FAILURE);                                             \
 }
 
