@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -std=c17
+CFLAGS = -Wall -Wextra -Wconversion -Wsign-conversion -pedantic -Werror -std=c17
 SRCDIR = ../src
 BINDIR = ../bin
 
