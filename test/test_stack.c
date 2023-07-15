@@ -4,6 +4,7 @@
  * @brief Unit tests for the default stack implementation.
  */
 
+#include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -41,7 +42,7 @@ int main(void) {
     errif(Stack_peek(NULL) != NULL, "Stack_peek on NULL is not NULL");
     errif(Stack_peek(s) != NULL, "Stack_peek on an empty stack is not NULL");
 
-    for (int i = 0; i < 6; i++) {
+    for (size_t i = 0; i < 6; i++) {
         errif(!Stack_push(s, &t[i]), "Stack_push failure");
         errif(Stack_count(s) != i + 1, "Stack_count incorrect");
         errif(Stack_peek(s) != &t[i], "Stack_peek incorrect");
@@ -50,7 +51,7 @@ int main(void) {
     errif(!Stack_trim(s), "Stack_trim failure");
     errif(Stack_trim(NULL), "Stack_trim of NULL is true");
 
-    for (int i = 0; i < 6; i++) {
+    for (size_t i = 0; i < 6; i++) {
         Tester* peek = Stack_peek(s);
         Tester* pop = Stack_pop(s);
         errif(peek != pop, "Stack_peek and Stack_pop don't match");

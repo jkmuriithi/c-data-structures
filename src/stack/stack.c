@@ -64,7 +64,8 @@ bool Stack_push(Stack* s, void* entry) {
 
     // Grow items array if necessary
     if (s->count == s->items_len) {
-        size_t new_length = (size_t) (s->items_len * C_GEN_STACK_GROWTH_FACTOR);
+        size_t new_length = (size_t) ((double) s->items_len * 
+            C_GEN_STACK_GROWTH_FACTOR);
         if (new_length < s->items_len) return false; // Overflow check
 
         if (!resize(s, new_length)) return false;
